@@ -1,47 +1,70 @@
-README
-Project Title: MNIST Classification Using Machine Learning
-Project Description:
-This project demonstrates the classification of handwritten digits using the MNIST dataset. The project applies various machine learning techniques, including Stochastic Gradient Descent (SGD) and k-Nearest Neighbors (k-NN), to achieve high accuracy in digit classification. The notebooks cover essential steps such as data loading, preprocessing, training models, evaluation, and visualization of results.
 
-Files:
-MNIST ML.ipynb:
+# MNIST Classification Using Machine Learning
 
-Description: This notebook initiates the MNIST classification project. It starts with loading the MNIST dataset, conducting preliminary exploratory data analysis, and building a Stochastic Gradient Descent (SGD) classifier.
-Core Steps:
-Data Loading: Loads the MNIST dataset using fetch_openml from sklearn.
-Data Preprocessing: The dataset is visualized, and samples are displayed. Data is also split into training and test sets.
-Model Building: An SGD classifier is trained for digit classification.
-Cross-Validation: The model is evaluated using cross-validation, achieving an accuracy of around 85%.
-Scaling: A StandardScaler is applied to improve model accuracy to 90%.
-Error Analysis: Confusion matrices are plotted to analyze classification errors visually.
-Advanced Techniques: Multi-label classification is introduced using the k-Nearest Neighbors classifier.
-Continuation of MNIST.ipynb:
+## Project Overview
+This project demonstrates the classification of handwritten digits from the MNIST dataset using machine learning techniques. It explores the use of models like Stochastic Gradient Descent (SGD) and k-Nearest Neighbors (k-NN) for accurate classification. The project also covers error analysis through confusion matrices and introduces advanced concepts such as multi-label classification.
 
-Description: This notebook continues from where the first notebook left off. It introduces multi-output classification and focuses on optimizing the classification pipeline.
-Core Steps:
-Multi-label Classification: k-Nearest Neighbors is used for multi-label classification, predicting both if the digit is 7 or above and whether it is odd.
-Text Classification Preprocessing: Introduces a text preprocessing pipeline using custom transformers to convert text data into a vector format, which is unrelated to the MNIST dataset but highlights a reusable methodology.
-Pipeline Implementation: Builds a preprocessing pipeline to convert emails to word counts and further to vectorized form.
-Logistic Regression Model: Applies logistic regression to the transformed data and evaluates it using cross-validation.
-Evaluation: Outputs precision and recall metrics to assess model performance on the test set.
-Dependencies:
-Python 3.x
-Jupyter Notebook
-Libraries:
-numpy
-matplotlib
-sklearn
-joblib
-scipy
-How to Run:
-Clone or download the project files.
-Install the required dependencies using pip:
-Copy code
+## What I've Learned
+
+- **Data Loading**: I learned how to download and load the MNIST dataset using `fetch_openml` from `sklearn`.
+- **Data Preprocessing**: I implemented feature scaling using `StandardScaler` to improve model accuracy, from 85% to 90%.
+- **Model Building**: I built and trained an SGD classifier, and later implemented a k-NN classifier for multi-label classification.
+- **Error Analysis**: I performed an error analysis using confusion matrices to visually understand the classification errors.
+- **Advanced Techniques**: I explored multi-label classification with k-NN, predicting both whether a digit is greater than or equal to 7 and whether it is odd.
+
+## Key Features of the Project
+
+- **SGD Classifier**: Uses a simple Stochastic Gradient Descent classifier to classify handwritten digits with a cross-validation accuracy of 85%, which increases to 90% after scaling.
+- **Feature Scaling**: Implemented `StandardScaler` to scale the data and improve model performance.
+- **Confusion Matrix Analysis**: Visualized classification errors using confusion matrices.
+- **Multi-label Classification**: Explored k-Nearest Neighbors for predicting multiple labels at once, such as whether a digit is greater than or equal to 7 and whether it is odd.
+
+## Getting Started
+
+### Prerequisites
+
+To run the project, you need to have the following Python libraries installed:
+
+- `numpy`
+- `matplotlib`
+- `scikit-learn`
+- `joblib`
+- `scipy`
+
+You can install the necessary libraries by running:
+
+```bash
 pip install numpy matplotlib scikit-learn joblib scipy
-Open both .ipynb files in Jupyter Notebook or Jupyter Lab.
-Run the notebooks sequentially to follow the process of data loading, model training, evaluation, and analysis.
-Results:
-Accuracy: The SGD classifier achieves an accuracy of ~90% after scaling the features.
-Error Analysis: A confusion matrix is plotted to visualize and understand misclassifications.
-Multi-label Classification: The k-NN classifier is capable of handling multi-label predictions for complex cases.
-Evaluation Metrics: Precision and recall are computed for further insights into model performance.
+```
+
+### Running the Notebooks
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/yourusername/mnist-classification.git
+   cd mnist-classification
+   ```
+
+2. Install the required dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Open and run the Jupyter Notebooks:
+
+   ```bash
+   jupyter notebook MNIST_ML.ipynb
+   jupyter notebook continuation_of_MNIST.ipynb
+   ```
+
+## Future Learning Goals
+
+- **Model Optimization**: Experiment with additional models and hyperparameter tuning to improve classification accuracy.
+- **Feature Engineering**: Develop new features and further optimize the dataset.
+- **Deep Learning**: Explore neural network approaches, such as using a Convolutional Neural Network (CNN), to enhance classification performance.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
